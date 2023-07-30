@@ -18,7 +18,12 @@ export function Game() {
 		>
 			<Field></Field>
 			{washerPositions.map((washerPosition) => {
-				return <Washer pos={washerPosition}></Washer>;
+				return (
+					<Washer
+						key={pos.x}
+						pos={washerPosition}
+					></Washer>
+				);
 			})}
 		</div>
 	);
