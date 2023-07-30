@@ -4,9 +4,9 @@ import { Washer } from "./Washer";
 import { useState } from "react";
 
 export function Game() {
-	const [washerPositions, setWasherPositions] = useState([]);
+	const [washerPositions, setWasherPositions] = useState<object[]>([]);
 
-	const clickHandler = (e: MouseEvent) => {
+	const clickHandler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 		const pos = { x: e.clientX - 16, y: e.clientY - 16 };
 		setWasherPositions((p) => [...p, pos]);
 	};
