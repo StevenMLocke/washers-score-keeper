@@ -20,7 +20,7 @@ export function Game() {
 			{washerPositions.map((washerPosition) => {
 				return (
 					<Washer
-						key={pos.x}
+						key={washerPosition.x}
 						pos={washerPosition}
 					></Washer>
 				);
