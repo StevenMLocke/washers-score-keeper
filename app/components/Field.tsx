@@ -2,7 +2,7 @@
 import { Cup } from "./Cup";
 export function Field() {
 	return (
-		<div className='relative basis-1/4 border-4 border-black bg-green-800'>
+		<div className='relative basis-full md:basis-1/4 pt-44 border-4 border-black bg-green-800'>
 			<Cup></Cup>
 		</div>
 	);
