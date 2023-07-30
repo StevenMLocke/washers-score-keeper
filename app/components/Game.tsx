@@ -8,13 +8,13 @@ export function Game() {
 	const [washerPositions, setWasherPositions] = useState<washerPosition[]>([]);
 
 	const clickHandler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-		const pos = { x: e.clientX - 16, y: e.clientY - 16 };
+		const pos = { x: e.clientX, y: e.clientY };
 		setWasherPositions((p) => [...p, pos]);
 	};
 
 	return (
 		<div
-			className='flex min-w-full min-h-full justify-center border-4 border-blue-500'
+			className='flex min-w-full min-h-full justify-center border-4 border-blue-500 @container'
 			onClick={clickHandler}
 		>
 			<Field></Field>

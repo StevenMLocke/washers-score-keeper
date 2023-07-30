@@ -3,7 +3,7 @@ import { Game } from "./components/Game";
 
 export default function Home() {
 	return (
-		<main className='flex min-h-screen p-0 md:p-24 justify-center border-black border-8 m-4'>
+		<main className='box-border flex h-[95cqh] p-0 md:p-24 justify-center border-black border-8 m-4'>
 			<Game></Game>
 		</main>
 	);
