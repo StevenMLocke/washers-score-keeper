@@ -1,19 +1,22 @@
-import { washerPosition } from "../interfaces/interfaces";
-export function Washer({ x, y }: washerPosition) {
-	return (
-		<div
-			className='flex justify-center items-center'
-			style={{ top: y, left: x, position: "absolute" }}
-		>
-			<div
-				className={`absolute w-7 h-7 bg-transparent border-8 box-border rounded-full border-blue-500`}
-			></div>
-			<div
-				className={`absolute w-7 h-7 bg-transparent border-2 box-border rounded-full border-black`}
-			></div>
-			<div
-				className={`absolute w-4 h-4 bg-transparent border-2 box-border rounded-full border-black`}
-			></div>
-		</div>
-	);
+import { washerPositions } from "../interfaces/interfaces";
+
+export function Washer({ x, y, throwNum = 0 }: washerPositions) {
+  return (
+    <div
+      className="flex items-center justify-center"
+      style={{ top: y, left: x, position: "absolute" }}
+    >
+      <div
+        className={`absolute box-border h-7 w-7 rounded-full border-8 ${
+          throwNum % 2 === 0 ? "border-blue-500" : "border-red-500"
+        } bg-transparent`}
+      ></div>
+      <div
+        className={`absolute box-border h-7 w-7 rounded-full border-2 border-black bg-transparent`}
+      ></div>
+      <div
+        className={`absolute box-border h-4 w-4 rounded-full border-2 border-black bg-transparent`}
+      ></div>
+    </div>
+  );
 }

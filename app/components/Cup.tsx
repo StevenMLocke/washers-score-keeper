@@ -1,6 +1,10 @@
 "use client";
-export function Cup() {
-	return (
-		<div className='w-12 h-12 mx-auto bg-black border-4 rounded-full border-white'></div>
-	);
+
+export function Cup({ cupRef }: any) {
+  return (
+    <div
+      ref={cupRef}
+      className="mx-auto h-12 w-12 rounded-full border-4 border-white bg-black"
+    ></div>
+  );
 }

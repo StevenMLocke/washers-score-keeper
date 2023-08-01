@@ -1,4 +1,6 @@
-export interface washerPosition {
-	x: number;
-	y: number;
+export interface washerPositions {
+  x: number;
+  y: number;
+  throwNum?: number;
+  distanceToCenter?: number;
 }
